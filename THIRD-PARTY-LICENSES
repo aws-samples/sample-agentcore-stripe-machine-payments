@@ -1,0 +1,16 @@
+This sample includes third-party software subject to the following licenses.
+
+** privy-frontend/
+   Derived from https://github.com/privy-io/aws-agentcore-sdk
+   Licensed under the Apache License, Version 2.0.
+   Full license text: privy-frontend/LICENSE.md
+
+   Modifications in this repository: added the agent chat panel
+   (src/components/sections/agent-chat.tsx) and the /api/agent route
+   (src/app/api/agent/route.ts), and updated home-screen.tsx to mount the panel.
+
+** privy-frontend/public/fonts/InterVariable.ttf
+   Inter, by Rasmus Andersson. Licensed under the SIL Open Font License 1.1.
+
+** privy-frontend/public/fonts/ABCFavorit-Medium.woff2
+   ABC Favorit, by Dinamo. Redistributed as shipped in privy-io/aws-agentcore-sdk.

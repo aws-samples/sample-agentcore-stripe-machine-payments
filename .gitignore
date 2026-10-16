@@ -1,0 +1,19 @@
+.env
+.env.*
+!*.env.example
+!.env.local.example
+!**/.env.example
+!**/.env.local.example
+.venv/
+__pycache__/
+*.pyc
+
+.claude/
+.mcp.json
+.DS_Store
+node_modules/
+
+# Internal security-review artifacts (kept locally, not published)
+.holmes/
+scan-results/
+cdk.out/

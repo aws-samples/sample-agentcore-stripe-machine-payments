@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "noEmit": true
+  },
+  "include": [
+    "src/handler.ts",
+    "src/http-adapters.ts",
+    "src/mpp-handler.ts"
+  ],
+  "exclude": []
+}

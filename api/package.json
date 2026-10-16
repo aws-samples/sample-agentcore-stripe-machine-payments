@@ -1,0 +1,35 @@
+{
+  "name": "aws-lambda-mpp-workshop-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "build:mpp": "tsc --project tsconfig.mpp.json",
+    "build:mpp-solution": "tsc --project tsconfig.mpp-solution.json",
+    "test": "tsc --project tsconfig.test.json && node --test dist/test/*.test.js",
+    "synth": "cdk synth",
+    "synth:mpp": "set -a; . ../.env; set +a; MPP_ENABLED=true MPP_HANDLER_ENTRY=src/mpp-handler.ts cdk synth",
+    "synth:mpp-solution": "set -a; . ../.env; set +a; MPP_ENABLED=true cdk synth",
+    "deploy": "cdk deploy",
+    "deploy:mpp": "set -a; . ../.env; set +a; MPP_ENABLED=true MPP_HANDLER_ENTRY=src/mpp-handler.ts cdk deploy",
+    "deploy:mpp-solution": "set -a; . ../.env; set +a; MPP_ENABLED=true cdk deploy",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.273.0",
+    "constructs": "^10.3.0",
+    "mppx": "^0.9.0",
+    "stripe": "^22.6.0",
+    "viem": "^2.56.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^22.5.4",
+    "aws-cdk": "^2.1145.0",
+    "cdk-nag": "^2.38.2",
+    "esbuild": "^0.28.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
